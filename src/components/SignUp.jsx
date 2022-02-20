@@ -41,54 +41,72 @@ const SignUp = () => {
   }, []);
   return (
     <form onSubmit={loginUser}>
-      <div className="mb-3">
-        <label className="form-label">Name</label>
+      <div className='form-floating mb-3'>
         <input
-          type="text"
-          className="form-control"
-          name="name"
+          type='text'
+          className='form-control'
+          name='name'
+          id='name'
+          placeholder='name'
           value={credentials.name}
           minLength={3}
           onChange={onChange}
           required
         />
+        <label className='form-label' htmlFor='name'>
+          Name
+        </label>
       </div>
-      <div className="mb-3">
-        <label className="form-label">Email address</label>
+      <div className='form-floating mb-3'>
         <input
-          type="email"
-          className="form-control"
-          name="email"
+          type='email'
+          className='form-control'
+          name='email'
+          placeholder='email'
+          id='email'
           value={credentials.email}
           onChange={onChange}
           required
         />
+        <label className='form-label' htmlFor='email'>
+          Email address
+        </label>
       </div>
-      <div className="mb-3">
-        <label className="form-label">Password</label>
+      <div className='form-floating mb-3'>
         <input
-          type="password"
-          className="form-control"
-          name="password"
+          type='password'
+          className='form-control'
+          name='password'
+          placeholder='password'
+          id='password'
           value={credentials.password}
           onChange={onChange}
           required
+          autoComplete='true'
           minLength={8}
         />
+        <label className='form-label' htmlFor='password'>
+          Password
+        </label>
       </div>
-      <div className="mb-3">
-        <label className="form-label">Confirm Password</label>
+      <div className='form-floating mb-3'>
         <input
-          type="password"
-          className="form-control"
-          name="cpassword"
+          type='password'
+          className='form-control'
+          name='cpassword'
+          placeholder='cpassword'
+          id='cpassword'
           value={credentials.cpassword}
           onChange={onChange}
           required
           minLength={8}
+          autoComplete='true'
         />
+        <label className='form-label' htmlFor='cpassword'>
+          Confirm Password
+        </label>
       </div>
-      <button type="submit" className="btn btn-primary">
+      <button type='submit' className='btn btn-primary'>
         Submit
       </button>
     </form>
