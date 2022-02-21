@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/iNotes/static/css/main.f90d6a75.css",
-    "main.js": "/iNotes/static/js/main.3a54f421.js",
+    "main.js": "/iNotes/static/js/main.19498fe7.js",
     "static/media/bootstrap-icons.woff?": "/iNotes/static/media/bootstrap-icons.38c4d2499557ae0379fd.woff",
     "static/media/bootstrap-icons.woff2?": "/iNotes/static/media/bootstrap-icons.2b56e79ae5013246de29.woff2",
     "index.html": "/iNotes/index.html",
     "main.f90d6a75.css.map": "/iNotes/static/css/main.f90d6a75.css.map",
-    "main.3a54f421.js.map": "/iNotes/static/js/main.3a54f421.js.map"
+    "main.19498fe7.js.map": "/iNotes/static/js/main.19498fe7.js.map"
   },
   "entrypoints": [
     "static/css/main.f90d6a75.css",
-    "static/js/main.3a54f421.js"
+    "static/js/main.19498fe7.js"
   ]
 }
