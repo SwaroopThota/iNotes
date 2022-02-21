@@ -22,14 +22,14 @@ const Login = () => {
     if (response.authToken) {
       localStorage.setItem("token", response.authToken);
       setCredentials({ email: "", password: "" });
-      return navigate("/");
+      return navigate("/iNotes");
     } else {
       alert("Invalid Credentials");
     }
   };
   useEffect(() => {
     if (localStorage.getItem("token")) {
-      return navigate("/");
+      return navigate("/iNotes");
     }
     // eslint-disable-next-line
   }, []);

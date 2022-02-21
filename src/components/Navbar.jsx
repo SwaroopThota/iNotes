@@ -4,7 +4,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("token");
-    return navigate("/login");
+    return navigate("iNotes/login");
   };
   return (
     <nav
@@ -12,7 +12,7 @@ const Navbar = () => {
       style={{ backgroundColor: "#e3f2fd" }}
     >
       <div className='container-fluid'>
-        <Link className='navbar-brand' to='/'>
+        <Link className='navbar-brand' to='/iNotes'>
           iNotes
         </Link>
         <button
@@ -36,11 +36,14 @@ const Navbar = () => {
             </button>
           ) : (
             <>
-              <Link className='btn btn-outline-primary mx-1' to='/login'>
+              <Link className='btn btn-outline-primary mx-1' to='/iNotes/login'>
                 Login
               </Link>
-              <Link className='btn btn-outline-primary mx-1' to='/signup'>
-                SingUp
+              <Link
+                className='btn btn-outline-primary mx-1'
+                to='/iNotes/signup'
+              >
+                SignUp
               </Link>
             </>
           )}

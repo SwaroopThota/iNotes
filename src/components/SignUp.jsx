@@ -31,14 +31,14 @@ const SignUp = () => {
     response = await response.json();
     if (response.authToken) {
       localStorage.setItem("token", response.authToken);
-      return navigate("/");
+      return navigate("/iNotes");
     } else {
       alert(response.errors[0].msg);
     }
   };
   useEffect(() => {
     if (localStorage.getItem("token")) {
-      return navigate("/");
+      return navigate("/iNotes");
     }
     // eslint-disable-next-line
   }, []);
