@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const NoteContext = createContext();
 const NoteProvider = (props) => {
   const [notes, setNotes] = useState([]);
-  const host = "http://localhost:5000";
+  const host = "https://inotes-backend69.herokuapp.com";
   //   Method to fetch all notes from server
   const getNotes = async () => {
     const fetchOptions = {

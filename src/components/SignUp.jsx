@@ -20,11 +20,14 @@ const SignUp = () => {
       alert("Passwords doesn't match");
       return;
     }
-    let response = await fetch("http://localhost:5000/api/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
-    });
+    let response = await fetch(
+      "https://inotes-backend69.herokuapp.com/api/auth/register",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      }
+    );
     response = await response.json();
     if (response.authToken) {
       localStorage.setItem("token", response.authToken);

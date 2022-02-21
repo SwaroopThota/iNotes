@@ -10,11 +10,14 @@ const Login = () => {
   const loginUser = async (e) => {
     e.preventDefault();
     const { email, password } = credentials;
-    let response = await fetch("http://localhost:5000/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
+    let response = await fetch(
+      "https://inotes-backend69.herokuapp.com/api/auth/login",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      }
+    );
     response = await response.json();
     if (response.authToken) {
       localStorage.setItem("token", response.authToken);
