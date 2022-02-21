@@ -10,11 +10,11 @@ function App() {
     <NoteProvider>
       <BrowserRouter>
         <Navbar />
-        <div className="container my-3">
+        <div className='container my-3'>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
+            <Route path='/iNotes' element={<Home />} />
+            <Route path='/iNotes/login' element={<Login />} />
+            <Route path='/iNotes/signup' element={<SignUp />} />
           </Routes>
         </div>
       </BrowserRouter>

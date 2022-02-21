@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!localStorage.getItem("token")) {
-      return navigate("/login");
+      return navigate("/iNotes/login");
     }
     getNotes();
     // eslint-disable-next-line
@@ -34,78 +34,78 @@ const Home = () => {
       {/* Modal */}
       <div>
         <button
-          className="d-none"
+          className='d-none'
           ref={modalRef}
-          type="button"
-          data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop"
+          type='button'
+          data-bs-toggle='modal'
+          data-bs-target='#staticBackdrop'
         />
         <div
-          className="modal fade"
-          id="staticBackdrop"
-          tabIndex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
+          className='modal fade'
+          id='staticBackdrop'
+          tabIndex='-1'
+          aria-labelledby='staticBackdropLabel'
+          aria-hidden='true'
         >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="staticBackdropLabel">
+          <div className='modal-dialog'>
+            <div className='modal-content'>
+              <div className='modal-header'>
+                <h5 className='modal-title' id='staticBackdropLabel'>
                   Edit Note
                 </h5>
                 <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
+                  type='button'
+                  className='btn-close'
+                  data-bs-dismiss='modal'
+                  aria-label='Close'
                 ></button>
               </div>
-              <div className="modal-body">
+              <div className='modal-body'>
                 <form>
                   <h1>Add Notes</h1>
-                  <div className="mb-3">
-                    <label className="form-label">Title</label>
+                  <div className='mb-3'>
+                    <label className='form-label'>Title</label>
                     <input
-                      type="text"
-                      className="form-control"
-                      name="eTitle"
+                      type='text'
+                      className='form-control'
+                      name='eTitle'
                       value={note.eTitle}
                       onChange={noteChange}
                     />
                   </div>
-                  <div className="mb-3">
-                    <label className="form-label">Description</label>
+                  <div className='mb-3'>
+                    <label className='form-label'>Description</label>
                     <textarea
-                      className="form-control"
-                      rows="3"
-                      name="eDescription"
+                      className='form-control'
+                      rows='3'
+                      name='eDescription'
                       value={note.eDescription}
                       onChange={noteChange}
                     />
                   </div>
-                  <div className="mb-3">
-                    <label className="form-label">Tag</label>
+                  <div className='mb-3'>
+                    <label className='form-label'>Tag</label>
                     <input
-                      type="text"
-                      className="form-control"
-                      name="eTag"
+                      type='text'
+                      className='form-control'
+                      name='eTag'
                       value={note.eTag}
                       onChange={noteChange}
                     />
                   </div>
                 </form>
               </div>
-              <div className="modal-footer">
+              <div className='modal-footer'>
                 <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-bs-dismiss="modal"
+                  type='button'
+                  className='btn btn-secondary'
+                  data-bs-dismiss='modal'
                 >
                   Close
                 </button>
                 <button
-                  type="button"
-                  className="btn btn-primary"
+                  type='button'
+                  className='btn btn-primary'
                   onClick={async () => {
                     await updateNotes(note._id, {
                       title: note.eTitle,
